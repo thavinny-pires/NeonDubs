@@ -1,0 +1,182 @@
+:root {
+  --dark: #0C0C0C;
+  --card: #1E1E1E;
+  --text: #FCFDF5;
+  --dimmed-text: #9CA3AF;
+  --accent: #8C52FF;
+  --accent-dark: #5D36AA;
+  --box-shadow-dark:
+    0 10px 15px -3px rgba(0, 0, 0, 0.8),
+    0 4px 6px -2px rgba(0, 0, 0, 0.5);
+  --header-glass-bg: rgba(17, 17, 17, 0.6);
+  --gray-gradient: rgba(17, 17, 17, 0.8), #0C0C0C;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Another-TP";
+  src: url("/fonts/atwriter.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Xirod";
+  src: url("/fonts/xirod.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Atkinson", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  background-size: 100% 600px;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+main {
+  width: 720px;
+  max-width: calc(100% - 2em);
+  margin: auto;
+  padding: 3em 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.prose p {
+  margin-bottom: 2em;
+}
+
+a {
+  color: var(--accent);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+textarea,
+input {
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--card);
+  border: 1px solid var(--dimmed-text);
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #333333;
+  padding: 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+code {
+  padding: 2px 5px;
+  background-color: #333333;
+  color: var(--accent);
+  border-radius: 2px;
+}
+
+pre {
+  padding: 1.5em;
+  background-color: #1A1A1A;
+  border-radius: 8px;
+}
+
+pre > code {
+  all: unset;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+  margin: 0;
+  color: var(--dimmed-text);
+  font-size: 1.333em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333333;
+}
+
+.box-style {
+  box-shadow: var(--box-shadow-dark);
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 1em;
+  }
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

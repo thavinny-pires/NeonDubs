@@ -1,0 +1,64 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Typewriter from "astro-typewriter";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@constants";
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <div class="image-container">
+        <img src="/assets/logo.jpg" alt="Logo" />
+        <div class="divider"></div>
+      </div>
+
+      <Typewriter
+        writeSpeed={25}
+        messages={[
+          "Neon Dubs é uma equipe de Fandublagem e Dublagem Original que busca ser conhecida por todo o Brasil pelo seu trabalho com carinho e amor, Criado pelo Fandublador, Artista e Designer GK (Guilherme Mattza) em 2020."
+        ]}
+        waitWritten={60000}
+        class="typewriter"
+      />
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.image-container img {
+  width: 90%;
+  height: auto;
+  border-radius: 25px;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #686868;
+  border-radius: 1px;
+}
+
+.typewriter {
+  font-family: Arial, sans-serif;
+}
+</style>

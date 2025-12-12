@@ -1,0 +1,112 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+import { Icon } from "astro-icon/components";
+---
+
+<header>
+	<nav>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
+
+		<div class="internal-links">
+			<HeaderLink href="/">
+				<Icon name="fa6-solid:house" width="24" height="24" />
+			</HeaderLink>
+
+			<HeaderLink href="/guides">
+				<Icon name="fa6-solid:microphone" width="24" height="24" />
+			</HeaderLink>
+
+			<HeaderLink href="/sobre">
+				<Icon name="fa6-solid:circle-info" width="24" height="24" />
+			</HeaderLink>
+		</div>
+
+		<div class="social-links">
+			<a href="https://www.instagram.com/neon.dubsoficial" target="_blank" aria-label="Instagram">
+				<Icon name="fa6-brands:instagram" width="32" height="32" />
+			</a>
+		</div>
+	</nav>
+</header>
+
+<style>
+header {
+	margin: 0;
+	padding: 0 1em;
+	background: black;
+	box-shadow: 0 2px 8px rgba(var(--black), 5%);
+}
+
+h2 {
+	font-family: "Xirod";
+	margin: 0;
+	font-size: 1em;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+h2 a,
+h2 a.active {
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+}
+
+.internal-links {
+	display: flex;
+	gap: 0.3em;
+	white-space: nowrap;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.internal-links::-webkit-scrollbar {
+	display: none;
+}
+
+nav a {
+	padding: 1em 0.5em;
+	color: var(--black);
+	border-bottom: 4px solid transparent;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav a.active {
+	border-bottom-color: var(--accent);
+}
+
+.social-links {
+	display: flex;
+	gap: 1em;
+}
+
+.social-links a {
+	padding: 0.5em;
+	color: var(--black);
+	text-decoration: none;
+	border-bottom: none;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-links a:hover {
+	transform: scale(1.1);
+	opacity: 0.8;
+}
+
+@media (max-width: 720px) {
+	.social-links {
+		display: none;
+	}
+}
+</style>

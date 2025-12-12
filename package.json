@@ -1,0 +1,27 @@
+{
+  "name": "nelliel",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.7",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/fa6-solid": "^1.2.4",
+    "astro": "^5.14.6",
+    "astro-icon": "^1.1.5",
+    "astro-typewriter": "^1.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}
