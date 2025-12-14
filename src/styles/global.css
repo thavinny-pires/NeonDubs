@@ -1,14 +1,15 @@
 :root {
-  --dark: #0c0c0c;
-  --card: #1e1e1e;
-  --text: #fcfdf5;
-  --dimmed-text: #9ca3af;
-  --accent: #8c52ff;
-  --accent-dark: #5d36aa;
+  --dark: #0C0C0C;
+  --card: #1E1E1E;
+  --text: #FCFDF5;
+  --dimmed-text: #9CA3AF;
+  --accent: #8C52FF;
+  --accent-dark: #5D36AA;
   --box-shadow-dark:
-    0 10px 15px -3px rgba(0, 0, 0, 0.8), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+    0 10px 15px -3px rgba(0, 0, 0, 0.8),
+    0 4px 6px -2px rgba(0, 0, 0, 0.5);
   --header-glass-bg: rgba(17, 17, 17, 0.6);
-  --gray-gradient: rgba(17, 17, 17, 0.8), #0c0c0c;
+  --gray-gradient: rgba(17, 17, 17, 0.8), #0C0C0C;
 }
 
 @font-face {
@@ -123,7 +124,7 @@ code {
 
 pre {
   padding: 1.5em;
-  background-color: #1a1a1a;
+  background-color: #1A1A1A;
   border-radius: 8px;
 }
 
