@@ -1,8 +1,8 @@
 ---
 import "@styles/global.css";
 import type { ImageMetadata } from "astro";
-import FallbackImage from "@pvt-assets/blog-placeholder-1.jpg";
-import { SITE_TITLE, SITE_URL } from "@constants";
+import FallbackImage from "@pvt-assets/og_image.jepg";
+import { SITE_TITLE } from "@constants";
 import { Organization } from "@components/Organization.astro";
 
 interface Props {
@@ -32,6 +32,7 @@ const { title, description, image = FallbackImage } = Astro.props;
   name="google-site-verification"
   content="dhuhKeqkb88-hgrQNXKyraSoZfAIfmqVlzQJABfoZDk"
 />
+<Organization />
 
 <!-- Font preloads -->
 <link
@@ -57,7 +58,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 />
 
 <!-- Canonical URL -->
-<link rel="canonical" href={SITE_URL} />
+<link rel="canonical" href={Astro.url} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -66,11 +67,11 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
-<meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
