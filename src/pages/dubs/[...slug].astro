@@ -1,20 +1,20 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
-import Guide from '../../layouts/Dub.astro';
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Dub from "@layouts/Dub.astro";
 
 export async function getStaticPaths() {
-	const dubs = await getCollection('dubs');
-	return dubs.map((dub) => ({
-		params: { slug: dub.id },
-		props: dub,
-	}));
+  const dubs = await getCollection("dubs");
+  return dubs.map((dub) => ({
+    params: { slug: dub.id },
+    props: dub,
+  }));
 }
-type Props = CollectionEntry<'dubs'>;
+type Props = CollectionEntry<"dubs">;
 
 const dub = Astro.props;
 const { Content } = await render(dub);
 ---
 
 <Dub {...dub.data}>
-	<Content />
+  <Content />
 </Dub>
