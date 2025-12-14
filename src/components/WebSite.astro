@@ -1,0 +1,21 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "@constants";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_TITLE,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  inLanguage: "pt-BR",
+  publisher: {
+    "@type": "Organization",
+    name: SITE_TITLE,
+    url: SITE_URL,
+  },
+};
+
+const jsonLd = JSON.stringify(schema);
+---
+
+<script type="application/ld+json" set:html={jsonLd} />
