@@ -6,13 +6,13 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@layouts/*": ["./src/layouts/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@pvt-assets/*": ["./src/assets/*"],
-      "@pub-assets/*": ["./public/assets/*"],
-      "@constants": ["./src/consts.ts"]
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@utils/*": ["src/utils/*"],
+      "@styles/*": ["src/styles/*"],
+      "@pvt-assets/*": ["src/assets/*"],
+      "@pub-assets/*": ["public/assets/*"],
+      "@constants": ["src/consts.ts"]
     }
   }
 }
